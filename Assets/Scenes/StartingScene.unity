@@ -502,9 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a66bc0bc2c2dc04694362a764392ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextSceneIndex: -1
-  _previousSceneIndex: -1
-  _player: {fileID: 954226806}
 --- !u!4 &799122714
 Transform:
   m_ObjectHideFlags: 0
@@ -795,7 +792,7 @@ SpriteRenderer:
   m_SortingLayerID: -950267817
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -453053945, guid: 8e04fb4e18ad42945ae09fc671dcecbe, type: 3}
+  m_Sprite: {fileID: 1424320981, guid: 8e04fb4e18ad42945ae09fc671dcecbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
