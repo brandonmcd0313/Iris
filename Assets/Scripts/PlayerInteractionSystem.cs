@@ -28,7 +28,7 @@ public class PlayerInteractionSystem : MonoBehaviour
     {
         foreach (IInteractable interactable in interactables)
         {
-            if(interactable.gameObject == null)
+            if(interactable == null)
             {
                 interactables.Remove(interactable);
                 continue;

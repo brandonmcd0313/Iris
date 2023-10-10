@@ -30,22 +30,6 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
         
-        CheckPositionOnScreen();
     }
-
-    void CheckPositionOnScreen()
-    {
-        //translate player position to screen position
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-
-        //if the player is off the screen, call the next scene
-        if (screenPos.x > Screen.width)
-        {
-            OnPlayerExitScreenSpaceRight?.Invoke();
-        }
-        else if (screenPos.x < 0)
-        {
-            OnPlayerExitScreenSpaceLeft?.Invoke();
-        }
-    }
+    
 }
