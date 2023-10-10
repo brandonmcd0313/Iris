@@ -27,9 +27,21 @@ public class BirdControl : MonoBehaviour
         if (_otherObject.tag == "Player")
         {
             Debug.Log("Spooked by player.");
+            _animator.SetBool("Spooked", true);
             StartCoroutine(MoveToPlayer());
         }
     }
+
+    /*
+    void OnTriggerExit2D(Collider2D _otherObject)
+    {
+        if (_otherObject.tag == "Player")
+        {
+            Debug.Log("Player is gone");
+            _animator.SetBool("Spooked", false);
+        }
+    }
+    */
 
     //Enumerator to Fly Away when the player moves
     IEnumerator MoveToPlayer()
