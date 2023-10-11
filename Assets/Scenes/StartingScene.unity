@@ -352,11 +352,11 @@ PrefabInstance:
       objectReference: {fileID: 1181042010}
     - target: {fileID: 5769344258966354557, guid: 3326648334e05474ab0c4dca361fdfdd, type: 3}
       propertyPath: _randomXRange.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5769344258966354557, guid: 3326648334e05474ab0c4dca361fdfdd, type: 3}
       propertyPath: _randomXRange.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5769344258966354557, guid: 3326648334e05474ab0c4dca361fdfdd, type: 3}
       propertyPath: _randomYRange.x
@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5769344258966354557, guid: 3326648334e05474ab0c4dca361fdfdd, type: 3}
       propertyPath: _randomYRange.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5769344258966354557, guid: 3326648334e05474ab0c4dca361fdfdd, type: 3}
       propertyPath: _isUsingRandomXVariance
@@ -801,9 +801,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 799122712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a66bc0bc2c2dc04694362a764392ac3, type: 3}
+  m_Script: {fileID: 11500000, guid: b95190f297ede1f4c90b636cadb34e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nextSceneIndex: 1
+  _previousSceneIndex: -1
+  _player: {fileID: 954226806}
 --- !u!4 &799122714
 Transform:
   m_ObjectHideFlags: 0
