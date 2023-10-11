@@ -122,5 +122,5 @@ MonoBehaviour:
   _targetObject: {fileID: 0}
   _speed: 8
   _animationName: Spooked
-  _randomXRange: {x: -1, y: 1}
+  _randomXRange: {x: -2, y: 2}
   _randomYRange: {x: 0, y: 2}
