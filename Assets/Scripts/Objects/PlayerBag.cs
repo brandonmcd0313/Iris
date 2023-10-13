@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
     Sprite _defaultSprite;
     Vector3 _defaultScale;
 
-
+   public Action OnPlayerGrabBag;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
 
     public void OnPlayerInteract()
     {
+        OnPlayerGrabBag?.Invoke();
         //TODO: make this do something meaningful
         Debug.Log("Player interacted with " + gameObject.name);
         //scare all of the birds
