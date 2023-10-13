@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerBag : MonoBehaviour, IInteractable
 {
-    [SerializeField] Color _highlightColor;
+    [SerializeField] new Sprite _orange; 
     [SerializeField] GameObject[] _birds;
     bool _hasScaredBirds;
-    Color _defaultColor;
+    Sprite _defaultSprite;
     Vector3 _defaultScale;
 
 
 
     void Start()
     {
-        _defaultColor = GetComponent<SpriteRenderer>().color;
+        _defaultSprite = GetComponent<SpriteRenderer>().sprite;
         _defaultScale = transform.localScale;
         
     }
@@ -22,7 +22,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
     public void OnPlayerApproach()
     {
         //TODO: change to a sprite swap
-        GetComponent<SpriteRenderer>().color = _highlightColor;
+        GetComponent<SpriteRenderer>().sprite = _orange;
         //make object slightly bigger
         transform.localScale = _defaultScale * 1.1f;
     }
@@ -47,7 +47,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
 
     public void ResetToDefaults()
     {
-        GetComponent<SpriteRenderer>().color = _defaultColor;
+        GetComponent<SpriteRenderer>().sprite = _defaultSprite;
         transform.localScale = _defaultScale;
     }
 }
