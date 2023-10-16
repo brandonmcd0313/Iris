@@ -44,7 +44,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
         }
 
         _hasScaredBirds = true;
-
+        Destroy(gameObject);    
     }
 
     public void ResetToDefaults()
