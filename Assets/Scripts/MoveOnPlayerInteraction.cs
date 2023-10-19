@@ -10,6 +10,7 @@ public class MoveOnPlayerInteraction : MonoBehaviour
 
     [TooltipAttribute("The object to move to when spooked.")]
     [SerializeField] GameObject _targetObject;
+    [SerializeField] string _targetObjectName;
     [SerializeField] float _speed = 3f;
     
     [SerializeField] string _animationName;
@@ -22,6 +23,10 @@ public class MoveOnPlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (_targetObject == null)
+        {
+            _targetObject = GameObject.Find(_targetObjectName);
+        }
         if (GetComponent<Animator>() != null)
         { _animator = GetComponent<Animator>();
             _isUsingAnimator = true;

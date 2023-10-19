@@ -11,6 +11,7 @@ public class PlayerInteractionSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        interactables.Clear();
         interactables = FindObjectsOfType<MonoBehaviour>().OfType<IInteractable>().ToList();
     }
 
@@ -26,25 +27,35 @@ public class PlayerInteractionSystem : MonoBehaviour
 
     void LookForInteractableObjectsInRange(float range)
     {
-        foreach (IInteractable interactable in interactables)
+        for (int i = interactables.Count - 1; i >= 0; i--)
         {
-            if(interactable == null)
+            IInteractable interactable = interactables[i];
+            try
+            {
+
+                if (interactable == null)
+                {
+                    interactables.Remove(interactable);
+                    continue;
+                }
+                //check if the interactable is in range
+                if (Vector3.Distance(transform.position, interactable.gameObject.transform.position) <= range)
+                {
+                    //if it is, call the OnPlayerApproach method
+                    interactable.OnPlayerApproach();
+                }
+                else
+                {
+                    //if it is not, call the OnPlayerLeave method
+                    interactable.ResetToDefaults();
+                }
+            }
+            catch (MissingReferenceException e)
             {
                 interactables.Remove(interactable);
-                continue;
             }
-            //check if the interactable is in range
-            if (Vector3.Distance(transform.position, interactable.gameObject.transform.position) <= range)
-            {
-                //if it is, call the OnPlayerApproach method
-                interactable.OnPlayerApproach();
-            }
-            else
-            {
-                //if it is not, call the OnPlayerLeave method
-                interactable.ResetToDefaults();
-            }
-        
+
+
         }
     }
 
@@ -68,7 +79,7 @@ public class PlayerInteractionSystem : MonoBehaviour
         {
             return;
         }
-        
+
         //if there is a nearest interactable object, call the OnPlayerInteract method
         if (nearestInteractable != null)
         {
@@ -76,4 +87,5 @@ public class PlayerInteractionSystem : MonoBehaviour
         }
     }
 }
+
 

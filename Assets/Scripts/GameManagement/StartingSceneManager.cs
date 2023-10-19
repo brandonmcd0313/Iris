@@ -24,7 +24,7 @@ public class StartingSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefsManager.HasPlayerPrefBeenActivated(_birdEvent))
+        if (!PlayerPrefsManager.HasPlayerPrefBeenActivated(_birdEvent))
         {
             //spawn birds
             for (int i = 0; i < _birdSpawnPoints.Length; i++)
@@ -33,7 +33,7 @@ public class StartingSceneManager : MonoBehaviour
             }
         }
 
-        if (PlayerPrefsManager.HasPlayerPrefBeenActivated(_bagEvent))
+        if (!PlayerPrefsManager.HasPlayerPrefBeenActivated(_bagEvent))
         {
             //spawn bag
            GameObject bag = Instantiate(_bagPrefab, _bagSpawnPoint, Quaternion.identity);

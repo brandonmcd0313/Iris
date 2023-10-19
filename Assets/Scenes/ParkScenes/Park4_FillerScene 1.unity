@@ -734,7 +734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextSceneIndex: 5
   _previousSceneIndex: 3
-  _player: {fileID: 0}
 --- !u!4 &1248352693
 Transform:
   m_ObjectHideFlags: 0

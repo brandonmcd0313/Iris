@@ -6,7 +6,6 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour, IInteractable
 {
     [SerializeField] Color _highlightColor;
-    bool _isHighlighted = false;
     Color _defaultColor;
     Vector3 _defaultScale;
     
@@ -24,7 +23,6 @@ public class PickupItem : MonoBehaviour, IInteractable
         GetComponent<SpriteRenderer>().color = _highlightColor;
         //make object slightly bigger
         transform.localScale = _defaultScale * 1.1f;
-        _isHighlighted = true;
     }
     
     public void OnPlayerInteract()
@@ -38,7 +36,6 @@ public class PickupItem : MonoBehaviour, IInteractable
     {
         GetComponent<SpriteRenderer>().color = _defaultColor;
         transform.localScale = _defaultScale;
-        _isHighlighted = false;
     }
 }
 

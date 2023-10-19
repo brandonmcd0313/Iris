@@ -12,11 +12,12 @@ public class SceneManager : MonoBehaviour
     [SerializeField] int _previousSceneIndex;
 
     [Space(5)]
-    [SerializeField] GameObject _player;
+    GameObject _player;
 
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player"); 
         _player.GetComponent<PlayerController>().OnPlayerExitScreenSpaceRight += LoadNextScene;
         _player.GetComponent<PlayerController>().OnPlayerExitScreenSpaceLeft += LoadPreviousScene;
 

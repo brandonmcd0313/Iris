@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class PlayerBag : MonoBehaviour, IInteractable
 {
-    [SerializeField] new Sprite _orange; 
+    [SerializeField] Sprite _orange;
+    [SerializeField] Sprite _defaultSprite;
     [SerializeField] GameObject[] _birds;
     bool _hasScaredBirds;
-    Sprite _defaultSprite;
-    Vector3 _defaultScale;
+    Vector3 _defaultScale = new Vector3(0.77f, 0.77f, 0.77f);
 
    public Action OnPlayerGrabBag;
 
@@ -17,7 +17,8 @@ public class PlayerBag : MonoBehaviour, IInteractable
     {
         _defaultSprite = GetComponent<SpriteRenderer>().sprite;
         _defaultScale = transform.localScale;
-        
+        //set birds to any object with the tag "Bird"
+        _birds = GameObject.FindGameObjectsWithTag("Bird");
     }
 
     public void OnPlayerApproach()
