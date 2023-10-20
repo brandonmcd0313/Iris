@@ -27,6 +27,7 @@ public class PlayerInteractionSystem : MonoBehaviour
 
     void LookForInteractableObjectsInRange(float range)
     {
+        interactables = FindObjectsOfType<MonoBehaviour>().OfType<IInteractable>().ToList();
         for (int i = interactables.Count - 1; i >= 0; i--)
         {
             IInteractable interactable = interactables[i];
