@@ -314,7 +314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -908884817
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8975368db9c6b9a4f94a2d5cf3b145f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -339,7 +339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215508837
 GameObject:
@@ -601,7 +601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &603211955 stripped
 Transform:
@@ -710,7 +710,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextSceneIndex: 2
   _previousSceneIndex: -1
-  _player: {fileID: 954226806}
 --- !u!4 &799122714
 Transform:
   m_ObjectHideFlags: 0
@@ -749,11 +748,6 @@ MonoBehaviour:
   - {x: -6.84, y: 4.08}
   - {x: -1.58, y: 4.16}
   _bagSpawnPoint: {x: 0.74, y: -4.34}
---- !u!1 &954226806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2643784416862264883, guid: b7b3fe0f6f369bc47997a595afa8e979, type: 3}
-  m_PrefabInstance: {fileID: 2643784416180667973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1005433375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,6 +887,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3244e0c984bef24183238be2c2c40b8, type: 3}
+--- !u!1 &1459339338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459339340}
+  - component: {fileID: 1459339339}
+  m_Layer: 0
+  m_Name: Troy Coin Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1459339339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459339338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65856418a80daf4c8ae5c0893916577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _troyCoinPrefab: {fileID: 3725746277263610282, guid: 37c540238b076b441bd4485eba07cc6a, type: 3}
+  _troyCoinSpawnPoint: {x: -5.14, y: -4.1}
+--- !u!4 &1459339340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459339338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9948162, y: -3.125975, z: -0.046818703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1701856779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3068612320543212968, guid: e3244e0c984bef24183238be2c2c40b8, type: 3}
@@ -924,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2643784416862264893, guid: b7b3fe0f6f369bc47997a595afa8e979, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2643784416862264893, guid: b7b3fe0f6f369bc47997a595afa8e979, type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4760638005275619289, guid: 0f7ed73d37cf587419e05210b0a1be70, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4760638005275619289, guid: 0f7ed73d37cf587419e05210b0a1be70, type: 3}
       propertyPath: m_LocalPosition.x
