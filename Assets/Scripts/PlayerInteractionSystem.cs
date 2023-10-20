@@ -51,12 +51,10 @@ public class PlayerInteractionSystem : MonoBehaviour
                     interactable.ResetToDefaults();
                 }
             }
-            catch (MissingReferenceException e)
+            catch (MissingReferenceException)
             {
                 interactables.Remove(interactable);
             }
-
-
         }
     }
 

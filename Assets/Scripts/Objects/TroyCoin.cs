@@ -7,12 +7,24 @@ public class TroyCoin : MonoBehaviour, IInteractable
 {
     [SerializeField] Sprite _dullCoin;
     [SerializeField] Sprite _shinyCoin;
+    bool _willScareBirds = false;
+
+    TroyCoinSpawnManager _instance;
 
     Animator _anim;
     void Start()
     {
+        //assign the instance of TroyCoinSpawnManager
+        _instance = FindObjectOfType<TroyCoinSpawnManager>();
+
         _anim = GetComponent<Animator>();
         ResetToDefaults();
+
+        //if birds exist in the scene, set _willScareBirds to true
+        if (GameObject.FindGameObjectsWithTag("Bird").Length > 0)
+        {
+            _willScareBirds = true;
+        }
     }
     
     public void OnPlayerApproach()
@@ -25,16 +37,33 @@ public class TroyCoin : MonoBehaviour, IInteractable
 
     public void OnPlayerInteract()
     {
+        _instance.OnTroyCoinGrab();
+        //if birds exist in the scene, scare them
+        if (_willScareBirds)
+        {
+            foreach (GameObject bird in GameObject.FindGameObjectsWithTag("Bird"))
+            {
+                bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
+            }
+        }
         //TODO: add to inventory
         Destroy(gameObject);
+       
     }
 
     public void ResetToDefaults()
     {
-        //make coin dull and stop spinning
-        GetComponent<SpriteRenderer>().sprite = _dullCoin;
-        _anim.StopPlayback();
-        _anim.enabled = false;
+        try
+        {
+            //make coin dull and stop spinning
+            GetComponent<SpriteRenderer>().sprite = _dullCoin;
+            _anim.StopPlayback();
+            _anim.enabled = false;
+        }
+        catch (MissingReferenceException)
+        {
+            //do nothing 
+        }
     }
 
     

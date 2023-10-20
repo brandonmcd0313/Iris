@@ -41,8 +41,7 @@ public class MoveOnPlayerInteraction : MonoBehaviour
     }
 
     public void OnPlayerInteraction()
-    {
-        ;
+    { 
         if (_isUsingAnimator)
         {
             _animator.SetBool(_animationName, true);

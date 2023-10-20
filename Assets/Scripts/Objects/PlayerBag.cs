@@ -7,8 +7,6 @@ public class PlayerBag : MonoBehaviour, IInteractable
 {
     [SerializeField] Sprite _orange;
     [SerializeField] Sprite _defaultSprite;
-    [SerializeField] GameObject[] _birds;
-    bool _hasScaredBirds;
     Vector3 _defaultScale = new Vector3(0.77f, 0.77f, 0.77f);
 
    public Action OnPlayerGrabBag;
@@ -18,7 +16,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
         _defaultSprite = GetComponent<SpriteRenderer>().sprite;
         _defaultScale = transform.localScale;
         //set birds to any object with the tag "Bird"
-        _birds = GameObject.FindGameObjectsWithTag("Bird");
+    
     }
 
     public void OnPlayerApproach()
@@ -32,19 +30,11 @@ public class PlayerBag : MonoBehaviour, IInteractable
     public void OnPlayerInteract()
     {
         OnPlayerGrabBag?.Invoke();
-        //TODO: make this do something meaningful
-        Debug.Log("Player interacted with " + gameObject.name);
-        //scare all of the birds
-        if (_hasScaredBirds)
-        {
-            return;
-        }
-        foreach (GameObject bird in _birds)
+        foreach (GameObject bird in GameObject.FindGameObjectsWithTag("Bird"))
         {
             bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
         }
 
-        _hasScaredBirds = true;
         Destroy(gameObject);    
     }
 
