@@ -11,10 +11,13 @@ public class MenuManager : MonoBehaviour
     public GameObject _loadingScreen;
 
     public Button _startGameButton; //starts the button
+    AudioSource _audioSource;
+    public AudioClip _startSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _loadingScreen.SetActive(false);
     }
 
@@ -26,6 +29,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartButton()
     {
+        _audioSource.PlayOneShot(_startSound);
         //enable loading screen disable button
         _loadingScreen.SetActive(true);
         _startGameButton.interactable = false;
