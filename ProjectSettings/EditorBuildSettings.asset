@@ -23,4 +23,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParkScenes/Park5_TrunkOrTreatEntranceScene.unity
     guid: f8483309ea2baaf4ab9d8fca8f75085e
+  - enabled: 1
+    path: Assets/Scenes/TrunkOrTreatScenes/TrunkOrTreat1_CarsScene.unity
+    guid: 646b1fb74fce86f469b43037e9307268
+  - enabled: 1
+    path: Assets/Scenes/TrunkOrTreatScenes/TrunkOrTreat2_CandyDropScene.unity
+    guid: c82af08bb39f57f4b87aa3adbc79be5c
+  - enabled: 1
+    path: Assets/Scenes/TrunkOrTreatScenes/TrunkOrTreat3_CarsSceneNoCars.unity
+    guid: a7480642afb64f1418f59958c36eb9eb
+  - enabled: 1
+    path: Assets/Scenes/EndingScenes/End1_LeaveTrunkOrTreatScene 1.unity
+    guid: e6d165cc7618bac49a0663a9810a5e39
+  - enabled: 1
+    path: Assets/Scenes/EndingScenes/End2_CopCarScene.unity
+    guid: c5b9cd6c3400c61439758674e1045327
+  - enabled: 1
+    path: Assets/Scenes/EndingScenes/End3_MissingPosterRevealScene.unity
+    guid: a5026b455beeb1d42b5c1809ac59bd0e
   m_configObjects: {}
