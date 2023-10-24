@@ -8,6 +8,10 @@ public class TroyCoin : MonoBehaviour, IInteractable
 {
     [SerializeField] Sprite _dullCoin;
     [SerializeField] Sprite _shinyCoin;
+   
+     AudioSource _audioSource;
+    [SerializeField] AudioClip _TroyCoinSound;
+
     bool _willScareBirds = false;
 
     TroyCoinSpawnManager _instance;
@@ -15,6 +19,7 @@ public class TroyCoin : MonoBehaviour, IInteractable
     Animator _anim;
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         //assign the instance of TroyCoinSpawnManager
         _instance = FindObjectOfType<TroyCoinSpawnManager>();
 
@@ -38,7 +43,10 @@ public class TroyCoin : MonoBehaviour, IInteractable
 
     public void OnPlayerInteract()
     {
+        Debug.Log("Picked up");
+        
         _instance.OnTroyCoinGrab();
+        _audioSource.PlayOneShot(_TroyCoinSound);
         //if birds exist in the scene, scare them
         if (_willScareBirds)
         {
@@ -47,11 +55,16 @@ public class TroyCoin : MonoBehaviour, IInteractable
                 bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
             }
         }
-        //TODO: add to inventory
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().color = new Color (0,0,0,0);
+        Invoke("DestroyObject", 0.5f);
        
     }
 
+    void DestroyObject()
+    {
+        //TODO: add to inventory
+        Destroy(gameObject);
+    }
     public void ResetToDefaults()
     {
         try
