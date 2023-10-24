@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class TroyCoinSpawnManager : MonoBehaviour
 {
     private string _troyCoinAbility = "p_canSpawnTroyCoin";
-    private string _troyCoinGrabbedEvent = "p_hasGrabbedTroyCoin";
+    //items are added to the inventory
+    private string _troyCoinGrabbedEvent = "pItem_hasGrabbedTroyCoin";
     [SerializeField] GameObject _troyCoinPrefab;
     [SerializeField] Vector2 _troyCoinSpawnPoint;
     // Start is called before the first frame update
