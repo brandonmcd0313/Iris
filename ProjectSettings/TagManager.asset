@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bird
+  - Bag
+  - TroyCoin
+  - Candy
   layers:
   - Default
   - TransparentFX
