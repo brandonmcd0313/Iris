@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5220473525590524863}
   m_Layer: 0
   m_Name: Player Bag
-  m_TagString: Untagged
+  m_TagString: Bag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,11 +99,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _orange: {fileID: 1852560370, guid: a265ba8df2729b24fb57c4528ec28a05, type: 3}
   _defaultSprite: {fileID: -468132606, guid: a265ba8df2729b24fb57c4528ec28a05, type: 3}
-  _birds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
