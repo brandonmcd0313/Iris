@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,7 +61,7 @@ public class TroyCoin : MonoBehaviour, IInteractable
             _anim.StopPlayback();
             _anim.enabled = false;
         }
-        catch (MissingReferenceException)
+        catch (NullReferenceException)
         {
             //do nothing 
         }
