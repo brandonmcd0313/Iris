@@ -124,7 +124,7 @@ public class PlayerPrefsManager : MonoBehaviour
         }
     }
     
-    static string[] GetItemsInInventory()
+    public static string[] GetItemsInInventory()
     {
         //will return a list of only the TYPE of the item in the inventory
         //can be bag, troycoin, or candy
@@ -134,11 +134,7 @@ public class PlayerPrefsManager : MonoBehaviour
         foreach (string item in inventoryItemPlayerPrefs)
         {
             
-           if(item.ToLower().Contains("bag"))
-            {
-                items.Add("bag");
-            }
-            else if (item.ToLower().Contains("troycoin"))
+            if (item.ToLower().Contains("troycoin"))
             {
                 items.Add("troycoin");
             }
