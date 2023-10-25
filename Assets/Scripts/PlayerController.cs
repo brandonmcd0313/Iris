@@ -16,12 +16,16 @@ public class PlayerController : MonoBehaviour
     private float _yPosition = -3.55f;
     [SerializeField] float _speed = 5f;
     public Animator animator;
+    AudioSource _audioSource;
+    [SerializeField] AudioClip _muddyWalkSound;
+
     // Start is called before the first frame update
     void Start()
     {
         //set rigidbody to kinematic
         GetComponent<Rigidbody2D>().isKinematic = true;
         animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         //set the max and min x positions to the camera bounds
         _minXPosition = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)).x;
@@ -54,11 +58,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
             animator.SetBool("IsWalking", true);
+            _audioSource.PlayOneShot(_muddyWalkSound);
         }
         else if (horizontalInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
             animator.SetBool("IsWalking", true);
+            _audioSource.PlayOneShot(_muddyWalkSound);
         }
 
         //if on the right side of the screen and moving right
