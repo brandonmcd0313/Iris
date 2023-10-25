@@ -13,10 +13,14 @@ public class SceneManager : MonoBehaviour
 
     [Space(5)]
     GameObject _player;
-
+    SceneLocker _sceneLocker;
     // Start is called before the first frame update
     void Start()
     {
+        if(GetComponent<SceneLocker>() != null)
+        {
+            _sceneLocker = GetComponent<SceneLocker>();
+        }
         _player = GameObject.FindGameObjectWithTag("Player"); 
         _player.GetComponent<PlayerController>().OnPlayerExitScreenSpaceRight += LoadNextScene;
         _player.GetComponent<PlayerController>().OnPlayerExitScreenSpaceLeft += LoadPreviousScene;
@@ -25,6 +29,13 @@ public class SceneManager : MonoBehaviour
 
     void LoadNextScene()
     {
+        if(_sceneLocker != null)
+        {
+            if(_sceneLocker.IsLockedToTheRight && _sceneLocker.IsLocked)
+            {
+                return;
+            }
+        }
         //load the next scene
         if (_nextSceneIndex != -1)
         {
@@ -34,6 +45,13 @@ public class SceneManager : MonoBehaviour
 
     void LoadPreviousScene()
     {
+        if (_sceneLocker != null)
+        {
+            if (!_sceneLocker.IsLockedToTheRight && _sceneLocker.IsLocked)
+            {
+                return;
+            }
+        }
         //load the previous scene
         if (_previousSceneIndex != -1)
         {

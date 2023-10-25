@@ -12,6 +12,8 @@ public class VisitorMovementController : MonoBehaviour
     [SerializeField] GameObject[] _visitorPrefabs;
     [SerializeField] Vector3 _visitorSpawnPoint;
     [SerializeField] Vector3 _visitorDestination;
+
+    List<GameObject> _activeVisitors = new List<GameObject>();
     private string _sceneLoadEvent = "p_hasLoadedTrunkOrTreatEntrance";
     // Start is called before the first frame update
     //must be awake to happen before the scene manager is created
@@ -28,8 +30,12 @@ public class VisitorMovementController : MonoBehaviour
             Destroy(this);
         }
     }
+    private void Start()
+    {
+        GameObject.Find("Table").GetComponent<Table>().OnPlayerPaysTroyCoin += StopAllVisitors;
+    }
 
-   IEnumerator VisitorLoop()
+    IEnumerator VisitorLoop()
     {
         //shuffle the visitor prefab array
         for (int i = 0; i < _visitorPrefabs.Length; i++)
@@ -44,6 +50,7 @@ public class VisitorMovementController : MonoBehaviour
         for (int i = 0; i < _visitorPrefabs.Length; i++)
         {
             GameObject visitor = Instantiate(_visitorPrefabs[i], _visitorSpawnPoint, Quaternion.identity);
+            _activeVisitors.Add(visitor);
             StartCoroutine(MoveToPositon(visitor));
 
 
@@ -94,6 +101,28 @@ public class VisitorMovementController : MonoBehaviour
             timePassed += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        _activeVisitors.Remove(visitor);
         Destroy(visitor);
+    }
+    IEnumerator MoveBackToStart(GameObject visitor, int time)
+    {
+        float timePassed = 0;
+        Vector3 startPosition = visitor.transform.position;
+        while (timePassed < time)
+        {
+            visitor.transform.position = Vector3.Lerp(_visitorDestination, _visitorSpawnPoint, timePassed / time);
+            timePassed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        _activeVisitors.Remove(visitor);
+        Destroy(visitor);
+    }
+    public void StopAllVisitors()
+    {
+        StopAllCoroutines();
+        foreach (GameObject visitor in _activeVisitors)
+        {
+            StartCoroutine(MoveBackToStart(visitor,1));
+        }
     }
 }

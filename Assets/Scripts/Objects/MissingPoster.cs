@@ -23,8 +23,7 @@ public class MissingPoster : MonoBehaviour, IInteractable
 
     public void OnPlayerInteract()
     {
-        //pop up the poster
-        print("it is implemented shut up");
+        Instantiate(_posterPrefab, transform.position, Quaternion.identity);
     }
 
     public void ResetToDefaults()

@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultColor: {r: 0, g: 0, b: 0, a: 1}
   _highlightColor: {r: 0.827451, g: 0.49411765, b: 0.11372549, a: 1}
-  _posterPrefab: {fileID: 2483236936616465897, guid: 68d7f23a4a72b70458c2d96e5a92e439, type: 3}
+  _posterPrefab: {fileID: 274542664185966216, guid: 318c5309bb0196e4c90e95a671b84e21, type: 3}
 --- !u!1 &1446280518
 GameObject:
   m_ObjectHideFlags: 0
