@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2643784416862264894}
   - component: {fileID: 2643784416862264889}
   - component: {fileID: 2643784416862264888}
-  - component: {fileID: -565482415652504643}
+  - component: {fileID: -15709985075948903}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   animator: {fileID: 0}
-  _muddyWalkSound: {fileID: 8300000, guid: f9827e5b9d12e6d468b13c28e8345aac, type: 3}
+  _muddyWalkSound: {fileID: 8300000, guid: fe291a1dcabc04e4a94e663ea9fdab34, type: 3}
 --- !u!114 &2643784416862264894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &-565482415652504643
+--- !u!82 &-15709985075948903
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,14 +197,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.076
+  m_PlayOnAwake: 1
+  m_Volume: 0.24
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 148
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
