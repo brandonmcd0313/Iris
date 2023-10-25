@@ -11,7 +11,8 @@ public class TroyCoin : MonoBehaviour, IInteractable
    
      AudioSource _audioSource;
     [SerializeField] AudioClip _TroyCoinSound;
-
+    [SerializeField] AudioClip _failedPickup;
+    string _bagEvent = "p_hasPlayerBagBeenGrabed";
     bool _willScareBirds = false;
 
     TroyCoinSpawnManager _instance;
@@ -44,7 +45,12 @@ public class TroyCoin : MonoBehaviour, IInteractable
     public void OnPlayerInteract()
     {
         Debug.Log("Picked up");
-        
+        if(!PlayerPrefsManager.HasPlayerPrefBeenActivated(_bagEvent))
+        {
+            //if the player has not picked up the bag, play the failed pickup sound
+            _audioSource.PlayOneShot(_failedPickup);
+            return;
+        }
         _instance.OnTroyCoinGrab();
         _audioSource.PlayOneShot(_TroyCoinSound);
         //if birds exist in the scene, scare them

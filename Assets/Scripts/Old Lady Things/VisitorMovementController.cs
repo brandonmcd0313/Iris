@@ -20,15 +20,7 @@ public class VisitorMovementController : MonoBehaviour
     void Awake()
     {
         _oldLady.GetComponent<Animator>().enabled = false;
-        if (!PlayerPrefsManager.HasPlayerPrefBeenActivated(_sceneLoadEvent))
-        {
             StartCoroutine(VisitorLoop());
-         
-        }
-        else
-        {
-            Destroy(this);
-        }
     }
     private void Start()
     {
@@ -119,6 +111,7 @@ public class VisitorMovementController : MonoBehaviour
     }
     public void StopAllVisitors()
     {
+        _oldLady.GetComponent<OldLady>().StartFearMoment();
         StopAllCoroutines();
         foreach (GameObject visitor in _activeVisitors)
         {

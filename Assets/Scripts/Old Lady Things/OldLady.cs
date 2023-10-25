@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Antlr3.Runtime.Tree.TreeWizard;
 
 public class OldLady : MonoBehaviour
 {
@@ -10,10 +9,7 @@ public class OldLady : MonoBehaviour
     [SerializeField] float shiverDuration = 2f;
     [SerializeField] float shiverDistance = 0.5f;
     [SerializeField] float shiverCount = 4;
-    void Start()
-    {
-        StartFearMoment();
-    }
+  
    public void StartFearMoment()
     {
         StartCoroutine(FearMoment());
@@ -22,7 +18,8 @@ public class OldLady : MonoBehaviour
   
     IEnumerator FearMoment()
     {
-
+        //stop anim
+        GetComponent<Animator>().enabled = false;
         Vector3 startPosition = transform.position;
         float timePassed = 0f;
 

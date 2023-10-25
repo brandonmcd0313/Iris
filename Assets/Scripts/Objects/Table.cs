@@ -41,16 +41,24 @@ public class Table : MonoBehaviour, IInteractable
 
     public void OnPlayerApproach()
     {
-        if (_playerCanInteract)
+        if (!_playerCanInteract)
         {
-            GetComponent<SpriteRenderer>().sprite = _highlightedTable;
+            return;
         }
+            GetComponent<SpriteRenderer>().sprite = _highlightedTable;
+       
     }
 
     public void OnPlayerInteract()
     {
-        //place down three troy coin
-        OnPlayerPaysTroyCoin?.Invoke();
+        if (!_playerCanInteract)
+        {
+            return;
+        }
+        _playerCanInteract = false;
+        GetComponent<SpriteRenderer>().sprite = _unhighlightedTable;
+       //place down three troy coin
+       OnPlayerPaysTroyCoin?.Invoke();
         //remove three troy coin from inventory
         PlayerPrefsManager.RemoveAllTroyCoinsFromInventory();
 
