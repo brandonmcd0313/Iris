@@ -82,7 +82,7 @@ public class PlayerPrefsManager : MonoBehaviour
             RemoveObjectFromInventory(playerPrefName);
         }
     }
-    static void AddObjectToInventory(string playerPrefName)
+    public static void AddObjectToInventory(string playerPrefName)
     {
         //inventory is all objects tagged with "pItem"
         //the inventory player pref has dashes "-" between the names of the objects
@@ -152,4 +152,6 @@ public class PlayerPrefsManager : MonoBehaviour
         }
         return itemsArray;
     }
+
+    
 }

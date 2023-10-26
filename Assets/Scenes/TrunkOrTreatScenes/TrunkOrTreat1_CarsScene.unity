@@ -531,6 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966611689}
   - component: {fileID: 966611688}
+  - component: {fileID: 966611690}
   m_Layer: 0
   m_Name: Candy (2)
   m_TagString: Untagged
@@ -578,7 +579,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -908884817
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -605,6 +606,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &966611690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966611687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29d6887c948d6340a2fa9ad0f371320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultBowl: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
+  _highlightedBowl: {fileID: -1782887388, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
 --- !u!1 &1067595969
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +726,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1550117600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550117603}
+  - component: {fileID: 1550117602}
+  - component: {fileID: 1550117601}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1550117601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550117600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c3366e519ac7243b6ed2b45e2a83c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1550117602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550117600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95190f297ede1f4c90b636cadb34e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextSceneIndex: 7
+  _previousSceneIndex: -1
+--- !u!4 &1550117603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550117600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5720391, y: -2.7190924, z: 0.051807433}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592746033
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592746035}
   - component: {fileID: 1592746034}
+  - component: {fileID: 1592746036}
   m_Layer: 0
   m_Name: Candy
   m_TagString: Untagged
@@ -768,7 +843,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -908884817
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -795,6 +870,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592746036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592746033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29d6887c948d6340a2fa9ad0f371320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultBowl: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
+  _highlightedBowl: {fileID: -1782887388, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
 --- !u!1 &1820187761
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882941108}
   - component: {fileID: 1882941107}
+  - component: {fileID: 1882941109}
   m_Layer: 0
   m_Name: Candy (1)_0
   m_TagString: Untagged
@@ -936,7 +1026,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -908884817
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -963,6 +1053,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1882941109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882941106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29d6887c948d6340a2fa9ad0f371320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultBowl: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
+  _highlightedBowl: {fileID: -1782887388, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
 --- !u!1001 &2030887489
 PrefabInstance:
   m_ObjectHideFlags: 0

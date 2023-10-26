@@ -13,6 +13,7 @@ public class VisitorMovementController : MonoBehaviour
     [SerializeField] Vector3 _visitorSpawnPoint;
     [SerializeField] Vector3 _visitorDestination;
 
+    GameObject _activeBubble;
     List<GameObject> _activeVisitors = new List<GameObject>();
     private string _sceneLoadEvent = "p_hasLoadedTrunkOrTreatEntrance";
     // Start is called before the first frame update
@@ -51,6 +52,7 @@ public class VisitorMovementController : MonoBehaviour
 
             //spawn a speech bubble
             GameObject speechBubble = Instantiate(_speechBubblePrefab, _speechBubblePosition, Quaternion.identity);
+            _activeBubble = speechBubble;
             _oldLady.GetComponent<Animator>().enabled = true;
 
             //wait for the other half of the interaction time
@@ -111,6 +113,7 @@ public class VisitorMovementController : MonoBehaviour
     }
     public void StopAllVisitors()
     {
+        Destroy(_activeBubble);
         _oldLady.GetComponent<OldLady>().StartFearMoment();
         StopAllCoroutines();
         foreach (GameObject visitor in _activeVisitors)

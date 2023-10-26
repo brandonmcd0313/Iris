@@ -28,33 +28,45 @@ public class PlayerInteractionSystem : MonoBehaviour
     void LookForInteractableObjectsInRange(float range)
     {
         interactables = FindObjectsOfType<MonoBehaviour>().OfType<IInteractable>().ToList();
-        for (int i = interactables.Count - 1; i >= 0; i--)
+        //find the closest interactable object
+        float closestDistance = Mathf.Infinity;
+        IInteractable closestInteractable = null;
+        foreach (IInteractable interactable in interactables)
         {
-            IInteractable interactable = interactables[i];
+            //set to default
+            interactable.ResetToDefaults();
+            float distance = Vector3.Distance(transform.position, interactable.gameObject.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestInteractable = interactable;
+            }
+
             try
             {
 
-                if (interactable == null)
+                if (closestInteractable == null)
                 {
                     interactables.Remove(interactable);
                     continue;
                 }
                 //check if the interactable is in range
-                if (Vector3.Distance(transform.position, interactable.gameObject.transform.position) <= range)
+                if (Vector3.Distance(transform.position, closestInteractable.gameObject.transform.position) <= range)
                 {
                     //if it is, call the OnPlayerApproach method
-                    interactable.OnPlayerApproach();
+                    closestInteractable.OnPlayerApproach();
                 }
                 else
                 {
                     //if it is not, call the OnPlayerLeave method
-                    interactable.ResetToDefaults();
+                    closestInteractable.ResetToDefaults();
                 }
             }
             catch (MissingReferenceException)
             {
                 interactables.Remove(interactable);
             }
+
         }
     }
 
