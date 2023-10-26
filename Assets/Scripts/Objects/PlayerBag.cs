@@ -33,6 +33,7 @@ public class PlayerBag : MonoBehaviour, IInteractable
         foreach (GameObject bird in GameObject.FindGameObjectsWithTag("Bird"))
         {
             bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
+            bird.GetComponent<AudioSource>().Play();
         }
 
         Destroy(gameObject);    

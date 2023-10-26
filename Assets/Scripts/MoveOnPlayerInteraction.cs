@@ -47,6 +47,7 @@ public class MoveOnPlayerInteraction : MonoBehaviour
             _animator.SetBool(_animationName, true);
             print(_animationName);
         }
+
         StartCoroutine(MoveToTarget());
     }
 
