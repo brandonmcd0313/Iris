@@ -59,6 +59,7 @@ public class TroyCoin : MonoBehaviour, IInteractable
             foreach (GameObject bird in GameObject.FindGameObjectsWithTag("Bird"))
             {
                 bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
+                bird.GetComponent<AudioSource>().Play();
             }
         }
         GetComponent<SpriteRenderer>().color = new Color (0,0,0,0);
