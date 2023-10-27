@@ -16,9 +16,11 @@ public class CandyBowl : MonoBehaviour, IInteractable
 
     public void OnPlayerInteract()
     {
+        print("on interact tried added candy");
         //check if the player has a full inventory
-        if(PlayerPrefsManager.GetItemsInInventory().Length == 9)
+        if (PlayerPrefsManager.GetItemsInInventory().Length >= 9)
         {
+            print(PlayerPrefsManager.GetItemsInInventory().Length);
             //if they do, do nothing
             return;
         
