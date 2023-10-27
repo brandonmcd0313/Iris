@@ -43,8 +43,9 @@ public class PlayerBag : MonoBehaviour, IInteractable
             bird.GetComponent<AudioSource>().Play();
         }
 
-
-        Destroy(gameObject);    
+        GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        Invoke("DestroyObject", 0.5f);
+        //Destroy(gameObject);    
     }
 
     public void ResetToDefaults()
