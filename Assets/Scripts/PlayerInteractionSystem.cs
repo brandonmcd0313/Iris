@@ -42,31 +42,30 @@ public class PlayerInteractionSystem : MonoBehaviour
                 closestInteractable = interactable;
             }
 
-            try
-            {
+        }
+        try
+        {
 
-                if (closestInteractable == null)
-                {
-                    interactables.Remove(interactable);
-                    continue;
-                }
-                //check if the interactable is in range
-                if (Vector3.Distance(transform.position, closestInteractable.gameObject.transform.position) <= range)
-                {
-                    //if it is, call the OnPlayerApproach method
-                    closestInteractable.OnPlayerApproach();
-                }
-                else
-                {
-                    //if it is not, call the OnPlayerLeave method
-                    closestInteractable.ResetToDefaults();
-                }
-            }
-            catch (MissingReferenceException)
+            if (closestInteractable == null)
             {
-                interactables.Remove(interactable);
+                interactables.Remove(closestInteractable);
             }
-
+            //check if the interactable is in range
+            if (Vector3.Distance(transform.position, closestInteractable.gameObject.transform.position) <= range)
+            {
+                //if it is, call the OnPlayerApproach method
+                closestInteractable.OnPlayerApproach();
+              
+            }
+            else
+            {
+                //if it is not, call the OnPlayerLeave method
+                closestInteractable.ResetToDefaults();
+            }
+        }
+        catch (MissingReferenceException)
+        {
+            interactables.Remove(closestInteractable);
         }
     }
 
