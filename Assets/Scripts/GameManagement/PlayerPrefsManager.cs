@@ -6,7 +6,7 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     //make this a singleton
     public static PlayerPrefsManager instance;
-    static string playerPrefInventoryName = "p_inventory";
+    static string playerPrefInventoryName = "p_inventory"; 
     /* PREFIX
      *  all player prefs start with p_
      */
@@ -111,13 +111,13 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.SetString(playerPrefInventoryName, PlayerPrefs.GetString(playerPrefInventoryName).Replace(stringToRemove, ""));
     }
 
-    public static void RemoveAllTroyCoinsFromInventory()
+    public static void RemoveAllOfObjectTypeFromInventory(string type)
     {
         //split the inventory into parts
         string[] inventoryItemPlayerPrefs = PlayerPrefs.GetString(playerPrefInventoryName).Split('-');
         foreach (string playerPrefName in inventoryItemPlayerPrefs)
         {
-            if (playerPrefName.Contains("troycoin"))
+            if (playerPrefName.ToLower().Contains(type))
             {
                 RemoveObjectFromInventory(playerPrefName);
             }

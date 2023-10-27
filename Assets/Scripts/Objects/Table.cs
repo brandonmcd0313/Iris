@@ -60,8 +60,9 @@ public class Table : MonoBehaviour, IInteractable
        //place down three troy coin
        OnPlayerPaysTroyCoin?.Invoke();
         //remove three troy coin from inventory
-        PlayerPrefsManager.RemoveAllTroyCoinsFromInventory();
-
+        print("inventory before removing troy coins from table: " + PlayerPrefs.GetString("p_inventory"));
+        PlayerPrefsManager.RemoveAllOfObjectTypeFromInventory("troycoin");
+        print("inventory after removing troy coins from table: " + PlayerPrefs.GetString("p_inventory"));
         //find the scenelocker script
         SceneLocker sceneLocker = GameObject.Find("Scene Manager").GetComponent<SceneLocker>();
         sceneLocker.IsLocked = false;
