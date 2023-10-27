@@ -11,8 +11,11 @@ public class PlayerBag : MonoBehaviour, IInteractable
 
    public Action OnPlayerGrabBag;
 
+    [SerializeField]  AudioSource _audioSource;
+
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _defaultSprite = GetComponent<SpriteRenderer>().sprite;
         _defaultScale = transform.localScale;
         //set birds to any object with the tag "Bird"
@@ -30,11 +33,16 @@ public class PlayerBag : MonoBehaviour, IInteractable
     public void OnPlayerInteract()
     {
         OnPlayerGrabBag?.Invoke();
+
+        Debug.Log("Picked up");
+        this.GetComponent<AudioSource>().Play();
+
         foreach (GameObject bird in GameObject.FindGameObjectsWithTag("Bird"))
         {
             bird.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
             bird.GetComponent<AudioSource>().Play();
         }
+
 
         Destroy(gameObject);    
     }

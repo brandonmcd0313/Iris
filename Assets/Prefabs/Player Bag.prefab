@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _orange: {fileID: 1852560370, guid: a265ba8df2729b24fb57c4528ec28a05, type: 3}
   _defaultSprite: {fileID: -468132606, guid: a265ba8df2729b24fb57c4528ec28a05, type: 3}
+  _audioSource: {fileID: 7648205396114261964}
 --- !u!82 &7648205396114261964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0be58ae8621df0f46b628009273c0722, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

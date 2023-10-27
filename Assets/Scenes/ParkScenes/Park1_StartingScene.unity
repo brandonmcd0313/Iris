@@ -1312,7 +1312,7 @@ SpriteRenderer:
   m_SortingLayerID: -839388441
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1253204888, guid: cd2b7069fa4a9c3448205608bde4abb0, type: 3}
+  m_Sprite: {fileID: 250020221, guid: cd2b7069fa4a9c3448205608bde4abb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _troyCoinIcon: {fileID: -542845088, guid: c27112c8d5af60241bb12f93551c5162, type: 3}
-  _candyIcon: {fileID: 0}
+  _candyIcon: {fileID: 21300000, guid: f6484fe2c7ddad644a14c61e23f7e1a0, type: 3}
   _defaultBagIcon: {fileID: -1253204888, guid: cd2b7069fa4a9c3448205608bde4abb0, type: 3}
   _openBagIcon: {fileID: 250020221, guid: cd2b7069fa4a9c3448205608bde4abb0, type: 3}
 --- !u!1001 &1005433375
