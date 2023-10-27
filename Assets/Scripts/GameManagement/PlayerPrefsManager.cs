@@ -89,10 +89,6 @@ public class PlayerPrefsManager : MonoBehaviour
 
         //check if the item is already in the inventory
      
-        if (PlayerPrefs.GetString(playerPrefInventoryName).Contains(playerPrefName))
-        {
-            return;
-        }
         PlayerPrefs.SetString(playerPrefInventoryName, PlayerPrefs.GetString(playerPrefInventoryName) + "-" + playerPrefName);
     }
 
@@ -128,6 +124,10 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         //will return a list of only the TYPE of the item in the inventory
         //can be bag, troycoin, or candy
+        if (PlayerPrefs.GetString(playerPrefInventoryName) == "")
+        {
+            return new string[0];
+        }
         string[] inventoryItemPlayerPrefs = PlayerPrefs.GetString(playerPrefInventoryName).Split('-');
         //arraylist for items
         List<string> items = new List<string>();

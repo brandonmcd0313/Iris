@@ -31,6 +31,7 @@ public class InventoryIcon : MonoBehaviour
     // Start is called before the first frame update
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+    
         print("scene loaded");
         //set the spots array to the children of this gameobject
         spots = new GameObject[transform.childCount];
@@ -38,17 +39,21 @@ public class InventoryIcon : MonoBehaviour
         {
             spots[i] = transform.GetChild(i).gameObject;
         }
-       
-        //bag not activated
+      
+        //bag not activated\
+
+        
         if (!PlayerPrefsManager.HasPlayerPrefBeenActivated(_bagEvent))
         {
             Invoke("FirstTimeHookUp", 0.1f);
             HideBag();
         }
+        
         else
         {
             SpawnInventoryIcon();
         }
+        
     }
 
     void OpenBag()

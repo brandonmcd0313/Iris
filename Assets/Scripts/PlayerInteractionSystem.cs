@@ -72,6 +72,7 @@ public class PlayerInteractionSystem : MonoBehaviour
 
     void InteractWithNearestInteractableObject()
     {
+        
         //find the nearest interactable object
         IInteractable nearestInteractable = null;
         float nearestDistance = Mathf.Infinity;
@@ -90,10 +91,11 @@ public class PlayerInteractionSystem : MonoBehaviour
         {
             return;
         }
-
+        print("trying to interact with: " + nearestInteractable.gameObject.name);
         //if there is a nearest interactable object, call the OnPlayerInteract method
         if (nearestInteractable != null)
         {
+            print("interacted");
             nearestInteractable.OnPlayerInteract();
         }
     }
