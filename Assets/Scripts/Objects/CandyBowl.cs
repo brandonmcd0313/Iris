@@ -6,7 +6,7 @@ public class CandyBowl : MonoBehaviour, IInteractable
 {
     [SerializeField] Sprite _defaultBowl;
     [SerializeField] Sprite _highlightedBowl;
-    
+    [SerializeField] AudioClip _onCandyPickup;
     public void OnPlayerApproach()
     {
         //highlight the bowl
@@ -27,6 +27,7 @@ public class CandyBowl : MonoBehaviour, IInteractable
         {
             //add a candy to inventory
             //if they don't, add a candy to the inventory
+            GetComponent<AudioSource>().PlayOneShot(_onCandyPickup);
             PlayerPrefsManager.AddObjectToInventory("pItem_candy");
         }
     }
