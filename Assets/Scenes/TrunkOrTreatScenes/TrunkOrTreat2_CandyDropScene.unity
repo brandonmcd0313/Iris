@@ -432,7 +432,7 @@ MonoBehaviour:
   _targetObjectName: 
   _speed: 3
   _moveOnYAxis: 0
-  _animationName: 
+  _animationName: Scared
   _randomXRange: {x: 2, y: 8}
   _randomYRange: {x: 2, y: 8}
 --- !u!1 &663586536
@@ -716,7 +716,7 @@ MonoBehaviour:
   _targetObjectName: 
   _speed: 3
   _moveOnYAxis: 0
-  _animationName: 
+  _animationName: Scared
   _randomXRange: {x: 2, y: 8}
   _randomYRange: {x: 2, y: 8}
 --- !u!1 &977653805
@@ -743,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977653805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.7, y: -2.45, z: 0}
+  m_LocalPosition: {x: -25.66, y: -2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1263,7 +1263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1648283002
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1450,12 +1450,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685238db922b6374a97dc79402ced239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetObject: {fileID: 977653805}
-  _targetObjectTwo: {fileID: 1729900544}
+  _targetObject: {fileID: 0}
+  _targetObjectTwo: {fileID: 0}
   _targetObjectName: 
   _speed: 3
   _moveOnYAxis: 0
-  _animationName: 
+  _animationName: Scared
   _randomXRange: {x: 2, y: 8}
   _randomYRange: {x: 2, y: 8}
 --- !u!1 &1729900544
@@ -1482,7 +1482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729900544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.1, y: -2.45, z: 0}
+  m_LocalPosition: {x: 23.5, y: -2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
