@@ -10,9 +10,10 @@ public class MoveOnPlayerInteraction : MonoBehaviour
 
     [TooltipAttribute("The object to move to when spooked.")]
     [SerializeField] GameObject _targetObject;
+    [SerializeField] GameObject _targetObjectTwo;
     [SerializeField] string _targetObjectName;
     [SerializeField] float _speed = 3f;
-    
+    [SerializeField] bool _moveOnYAxis = true;
     [SerializeField] string _animationName;
 
     bool _isUsingAnimator = false;
@@ -60,7 +61,23 @@ public class MoveOnPlayerInteraction : MonoBehaviour
             targetPosition.x += Random.Range(_randomXRange.x, _randomXRange.y);
         
             targetPosition.y += Random.Range(_randomYRange.x, _randomYRange.y);
+    
         
+
+        //if second target is not null 50/50 change to choose it instead
+        if (_targetObjectTwo != null && Random.Range(0, 2) == 1)
+        {
+            targetPosition = _targetObjectTwo.transform.position;
+
+            targetPosition.x += Random.Range(_randomXRange.x, _randomXRange.y);
+
+            targetPosition.y += Random.Range(_randomYRange.x, _randomYRange.y);
+        }
+
+        if (!_moveOnYAxis)
+        {
+            targetPosition.y = transform.position.y;
+        }
         while (transform.position != targetPosition)
         {
             transform.position = Vector3.MoveTowards(

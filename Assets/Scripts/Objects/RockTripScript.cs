@@ -24,9 +24,10 @@ public class RockTripScript : MonoBehaviour
             print("inventory before removing candy from bag: " + PlayerPrefs.GetString("p_inventory"));
             PlayerPrefsManager.RemoveAllOfObjectTypeFromInventory("candy");
             print("inventory after removing candy from bag: " + PlayerPrefs.GetString("p_inventory"));
-
+            //put all the candy on the ground a objs
             foreach (GameObject person in GameObject.FindGameObjectsWithTag("Crowd"))
             {
+                print(person.gameObject.name);
                 person.GetComponent<MoveOnPlayerInteraction>().OnPlayerInteraction();
             }
 
