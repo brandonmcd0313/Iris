@@ -12,6 +12,7 @@ public class RockTripScript : MonoBehaviour
     [SerializeField] Vector2 _randomXRange = new Vector2(-2f, 2f);
    [ MinMaxSlider(-10f, 10f)]
     [SerializeField] Vector2 _randomYRange = new Vector2(-2f, 2f);
+    public AudioClip UHOHNOISE;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,11 @@ public class RockTripScript : MonoBehaviour
 
     void DropCandy(int candyAmount)
     {
+        if (GetComponent<AudioSource>() == null)
+        {
+            gameObject.AddComponent<AudioSource>();
+        }
+        GetComponent<AudioSource>().PlayOneShot(UHOHNOISE);
         //spawn candy at player pos with random offset
         for (int i = 0; i < candyAmount; i++)
         {
