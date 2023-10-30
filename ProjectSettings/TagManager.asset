@@ -10,6 +10,7 @@ TagManager:
   - Candy
   - Crowd
   - Car
+  - Piece of Candy
   layers:
   - Default
   - TransparentFX
