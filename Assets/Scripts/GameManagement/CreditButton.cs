@@ -13,7 +13,7 @@ public class CreditButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,8 +25,15 @@ public class CreditButton : MonoBehaviour
     public void ShowCredits()
     {
         //load credit scene
-       UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+        _audioSource.PlayOneShot(_contSound);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
     }
 
+    public void ToMainMenuButton()
+    {
+        _audioSource.PlayOneShot(_contSound);
+        PlayerPrefs.DeleteAll();
 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("OnGameStart");
+    }
 }
