@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerPrefsManager : MonoBehaviour
 {
     //make this a singleton
     public static PlayerPrefsManager instance;
-    static string playerPrefInventoryName = "p_inventory"; 
+    static string playerPrefInventoryName = "p_inventory";
+    static string activeScene = "p_activeScene";
     /* PREFIX
      *  all player prefs start with p_
      */
@@ -153,5 +154,14 @@ public class PlayerPrefsManager : MonoBehaviour
         return itemsArray;
     }
 
+    public static void SetActiveScene(Scene scene)
+    {
+        PlayerPrefs.SetString(activeScene, scene.name);
+    }
     
+    public static string GetActiveSceneName()
+    {
+        return PlayerPrefs.GetString(activeScene);
+    }
 }
+

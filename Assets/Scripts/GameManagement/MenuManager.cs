@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     public GameObject _loadingScreen;
 
     public Button _startGameButton; //starts the button
+    public Button _loadFromSaveButton;
     AudioSource _audioSource;
     public AudioClip _startSound;
 
@@ -29,15 +30,38 @@ public class MenuManager : MonoBehaviour
 
     public void StartButton()
     {
+        PlayerPrefs.DeleteAll();
         _audioSource.PlayOneShot(_startSound);
         //enable loading screen disable button
         _loadingScreen.SetActive(true);
         _startGameButton.interactable = false;
+        if(_loadFromSaveButton != null)
+        {
+
+            _loadFromSaveButton.interactable = false;
+        }
 
         //Start scene transition 
         StartCoroutine(LoadFirstScene());
     }
 
+    public void LoadFromSave()
+    {
+        string _shouldLoadPreviousActive = "p_shouldLoadPreviousActiveScene";
+        PlayerPrefsManager.ActivatePlayerPref(_shouldLoadPreviousActive);
+        _audioSource.PlayOneShot(_startSound);
+        //enable loading screen disable button
+        _loadingScreen.SetActive(true);
+        _startGameButton.interactable = false;
+        if (_loadFromSaveButton != null)
+        {
+
+            _loadFromSaveButton.interactable = false;
+        }
+
+        //Start scene transition 
+        StartCoroutine(LoadFirstScene());
+    }
 
     IEnumerator LoadFirstScene()
     {
