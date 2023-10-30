@@ -18,7 +18,9 @@ public class TrunkOrTreatManager : MonoBehaviour
         if (!PlayerPrefsManager.HasPlayerPrefBeenActivated(_carsHaveLeft))
         {
             //play the sound
-           // AudioSource.PlayClipAtPoint(_carLeavingSound, Camera.main.transform.position);
+           AudioSource.PlayClipAtPoint(_carLeavingSound, Camera.main.transform.position);
+            //set the player pref
+            PlayerPrefsManager.ActivatePlayerPref(_carsHaveLeft);
         }
 
         //kill all the cars

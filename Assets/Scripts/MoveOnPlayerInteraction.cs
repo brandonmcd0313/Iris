@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GD.MinMaxSlider;
 
 public class MoveOnPlayerInteraction : MonoBehaviour
 {
@@ -17,9 +16,7 @@ public class MoveOnPlayerInteraction : MonoBehaviour
     [SerializeField] string _animationName;
 
     bool _isUsingAnimator = false;
-    [MinMaxSlider(-10f, 10f)]
     [SerializeField] Vector2 _randomXRange = new Vector2(2f, 8f);
-    [MinMaxSlider(-10f, 10f)]
     [SerializeField] Vector2 _randomYRange = new Vector2(2f, 8f);
     // Start is called before the first frame update
     void Start()
@@ -91,6 +88,8 @@ public class MoveOnPlayerInteraction : MonoBehaviour
         {
             _animator.SetBool(_animationName, false);
         }
+
+        Destroy(gameObject);
     }
 }
 

@@ -121,8 +121,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetObject: {fileID: 0}
+  _targetObjectTwo: {fileID: 0}
   _targetObjectName: Bird Fly To
   _speed: 8
+  _moveOnYAxis: 1
   _animationName: Spooked
   _randomXRange: {x: -2, y: 2}
   _randomYRange: {x: 0, y: 2}

@@ -8,6 +8,8 @@ public class OnGameInitialStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //unlock player cursor
+        Cursor.lockState = CursorLockMode.None;
         //if player prefs exist load the load from previous menu
         if (PlayerPrefs.HasKey("p_inventory"))
         {

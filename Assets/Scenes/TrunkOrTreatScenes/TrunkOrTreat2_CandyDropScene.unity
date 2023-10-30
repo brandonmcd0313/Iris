@@ -227,7 +227,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: 
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &245328457
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a87144a95fae841a85426006bfbab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carLeavingSound: {fileID: 0}
+  _carLeavingSound: {fileID: 8300000, guid: e7da594caf233034aadb49bf0a0bd4cb, type: 3}
 --- !u!1 &269179425
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: Scared
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &320610044
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: Scared
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &977653805
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +913,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: 
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &1315190406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: 
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &1648283001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   _moveOnYAxis: 0
   _animationName: Scared
   _randomXRange: {x: -2, y: 2}
-  _randomYRange: {x: -2, y: 2}
+  _randomYRange: {x: 0, y: 0}
 --- !u!1 &1729900544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1584,7 @@ GameObject:
   - component: {fileID: 1745599528}
   m_Layer: 0
   m_Name: Crowd chatter
-  m_TagString: Untagged
+  m_TagString: Crowd
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a87144a95fae841a85426006bfbab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carLeavingSound: {fileID: 0}
+  _carLeavingSound: {fileID: 8300000, guid: e7da594caf233034aadb49bf0a0bd4cb, type: 3}
 --- !u!1 &1592746033
 GameObject:
   m_ObjectHideFlags: 0

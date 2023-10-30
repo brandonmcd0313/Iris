@@ -1,4 +1,4 @@
-using GD.MinMaxSlider;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +8,7 @@ public class RockTripScript : MonoBehaviour
     public bool _playerCanTrip;
     [SerializeField] GameObject _candyPrefab;
     string _playerTrippedEventName = "p_playerHasTripped";
-    [MinMaxSlider(-10f, 10f)]
     [SerializeField] Vector2 _randomXRange = new Vector2(-2f, 2f);
-   [ MinMaxSlider(-10f, 10f)]
     [SerializeField] Vector2 _randomYRange = new Vector2(-2f, 2f);
     public AudioClip UHOHNOISE;
 
