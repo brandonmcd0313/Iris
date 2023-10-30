@@ -492,7 +492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663586536
 GameObject:
@@ -1323,6 +1323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648283003}
   - component: {fileID: 1648283002}
+  - component: {fileID: 1648283004}
   m_Layer: 0
   m_Name: Candy (1)_0
   m_TagString: Candy
@@ -1370,7 +1371,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -908884817
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1397,6 +1398,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648283004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648283001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29d6887c948d6340a2fa9ad0f371320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultBowl: {fileID: -1098062651, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
+  _highlightedBowl: {fileID: -1782887388, guid: 85123c062c331cb45ac5feae670b88d3, type: 3}
+  _onCandyPickup: {fileID: 8300000, guid: 0be58ae8621df0f46b628009273c0722, type: 3}
 --- !u!1 &1720598639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,60 +2001,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3244e0c984bef24183238be2c2c40b8, type: 3}
---- !u!1001 &3926856883369940582
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.915
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.3843
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959955, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926856883428959959, guid: b2a8db8867158f140b44286357708c87, type: 3}
-      propertyPath: m_Name
-      value: Candy Piece
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b2a8db8867158f140b44286357708c87, type: 3}
