@@ -10,7 +10,7 @@ public class EndRevealAndCredit : MonoBehaviour
 {
    //public GameObject _missingPoster;
    // public GameObject _overlay;
-    public GameObject _revealPoint;
+    public int ScreenHeightPositionInPercent = 50;
 
     public float _revealSpeed;
 
@@ -29,13 +29,16 @@ public class EndRevealAndCredit : MonoBehaviour
 
     IEnumerator RevealPoster()
     {
+        Vector3 endPosition = new Vector3(0,0, 0);
+        endPosition.x = Screen.width / 2;
+        endPosition.y = Screen.height * (ScreenHeightPositionInPercent / 100f);
         while (true)
         {
             //Move toward set point in the scene
-            while (transform.position != _revealPoint.transform.position)
+            while (transform.position != endPosition)
             {
                 transform.position = Vector3.MoveTowards(
-                transform.position, _revealPoint.transform.position,
+                transform.position, endPosition,
                     _revealSpeed * Time.deltaTime);
                 yield return new WaitForSeconds(Time.deltaTime);
             }
