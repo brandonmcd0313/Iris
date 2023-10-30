@@ -35,6 +35,6 @@ public class ActiveSceneManager : MonoBehaviour
         
         }
 
-        PlayerPrefsManager.SetActiveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+        PlayerPrefsManager.SetActiveScene(scene);
     }
 }

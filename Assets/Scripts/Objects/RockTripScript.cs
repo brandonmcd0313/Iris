@@ -1,3 +1,4 @@
+using GD.MinMaxSlider;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,12 @@ using UnityEngine;
 public class RockTripScript : MonoBehaviour
 {
     public bool _playerCanTrip;
+    [SerializeField] GameObject _candyPrefab;
     string _playerTrippedEventName = "p_playerHasTripped";
+    [MinMaxSlider(-10f, 10f)]
+    [SerializeField] Vector2 _randomXRange = new Vector2(-2f, 2f);
+   [ MinMaxSlider(-10f, 10f)]
+    [SerializeField] Vector2 _randomYRange = new Vector2(-2f, 2f);
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +27,19 @@ public class RockTripScript : MonoBehaviour
         if (_otherObject.tag == "Player" && _playerCanTrip == true)
         {
             PlayerPrefsManager.ActivatePlayerPref(_playerTrippedEventName);
+            //get number of candy
+            string[] inventory = PlayerPrefsManager.GetItemsInInventory();
+            int candyCount = 0;
+            foreach (string item in inventory)
+            {
+                if (item == "candy")
+                {
+                    candyCount++;
+                }
+            }
+            DropCandy(candyCount);
             //remove the candy from inventory
-            print("inventory before removing candy from bag: " + PlayerPrefs.GetString("p_inventory"));
             PlayerPrefsManager.RemoveAllOfObjectTypeFromInventory("candy");
-            print("inventory after removing candy from bag: " + PlayerPrefs.GetString("p_inventory"));
             //put all the candy on the ground a objs
             foreach (GameObject person in GameObject.FindGameObjectsWithTag("Crowd"))
             {
@@ -36,6 +51,16 @@ public class RockTripScript : MonoBehaviour
         else if (_otherObject.tag == "Player" && _playerCanTrip == false)
         {
             print("Player's candy is safe :)   for now...");
+        }
+    }
+
+    void DropCandy(int candyAmount)
+    {
+        //spawn candy at player pos with random offset
+        for (int i = 0; i < candyAmount; i++)
+        {
+            Vector3 randomOffset = new Vector3(Random.Range(_randomXRange.x, _randomXRange.y), Random.Range(_randomYRange.x, _randomYRange.y), 0);
+            Instantiate(_candyPrefab, GameObject.FindGameObjectWithTag("Player").transform.position + randomOffset, Quaternion.identity);
         }
     }
 

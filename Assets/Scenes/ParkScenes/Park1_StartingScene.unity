@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 920190585}
   m_Layer: 0
   m_Name: BackPack InventoryIcon
-  m_TagString: Untagged
+  m_TagString: DontDestroyOnLoad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1667,9 +1667,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1607642502}
+  - component: {fileID: 1607642503}
   m_Layer: 0
   m_Name: Active Scene Manager
-  m_TagString: Untagged
+  m_TagString: DontDestroyOnLoad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1689,6 +1690,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607642503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607642501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8737408bdf144593b7238e106dfe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1616879486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1804,7 @@ GameObject:
   - component: {fileID: 1728669193}
   m_Layer: 0
   m_Name: background music
-  m_TagString: Untagged
+  m_TagString: DontDestroyOnLoad
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,7 +2029,7 @@ GameObject:
   - component: {fileID: 1760214209}
   m_Layer: 0
   m_Name: wind
-  m_TagString: Untagged
+  m_TagString: DontDestroyOnLoad
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

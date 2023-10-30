@@ -1013,6 +1013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCanTrip: 0
+  _candyPrefab: {fileID: 3926856883428959959, guid: b2a8db8867158f140b44286357708c87, type: 3}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!61 &1315190410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1326,7 +1329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1648283002
 SpriteRenderer:
   m_ObjectHideFlags: 0

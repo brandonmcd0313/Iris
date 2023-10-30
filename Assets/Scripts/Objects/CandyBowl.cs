@@ -29,6 +29,11 @@ public class CandyBowl : MonoBehaviour, IInteractable
         {
             //add a candy to inventory
             //if they don't, add a candy to the inventory
+            //add an audio source
+            if(GetComponent<AudioSource>() == null)
+            {
+                gameObject.AddComponent<AudioSource>();
+            }
             GetComponent<AudioSource>().PlayOneShot(_onCandyPickup);
             PlayerPrefsManager.AddObjectToInventory("pItem_candy");
         }
