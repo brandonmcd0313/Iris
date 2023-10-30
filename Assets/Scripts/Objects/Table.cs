@@ -9,6 +9,8 @@ public class Table : MonoBehaviour, IInteractable
     [SerializeField] Sprite _highlightedTable;
     [SerializeField] Sprite _unhighlightedTable;
     public Action OnPlayerPaysTroyCoin;
+    [SerializeField] GameObject _tableTroyCoin;
+    string _hasPayedTroyCoinEvent = "p_hasPayedTroyCoin";
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +39,21 @@ public class Table : MonoBehaviour, IInteractable
         {
             _playerCanInteract = false;
         }
+
+        if (PlayerPrefsManager.HasPlayerPrefBeenActivated(_hasPayedTroyCoinEvent))
+        {
+            _playerCanInteract = false;
+            Instantiate(_tableTroyCoin, new Vector3(3.6f, -1.5f, 2), Quaternion.identity);
+            Invoke("UnlockScene", 0.1f);
+        }
+
     }
 
+    void UnlockScene()
+    {
+        SceneLocker sceneLocker = GameObject.Find("Scene Manager").GetComponent<SceneLocker>();
+        sceneLocker.IsLocked = false;
+    }
     public void OnPlayerApproach()
     {
         if (!_playerCanInteract)
@@ -55,10 +70,12 @@ public class Table : MonoBehaviour, IInteractable
         {
             return;
         }
+        PlayerPrefsManager.ActivatePlayerPref(_hasPayedTroyCoinEvent);
         _playerCanInteract = false;
         GetComponent<SpriteRenderer>().sprite = _unhighlightedTable;
-       //place down three troy coin
-       OnPlayerPaysTroyCoin?.Invoke();
+        //place down three troy coin
+        Instantiate(_tableTroyCoin, new Vector3(3.6f, -1.5f, 2), Quaternion.identity);
+        OnPlayerPaysTroyCoin?.Invoke();
         //remove three troy coin from inventory
         print("inventory before removing troy coins from table: " + PlayerPrefs.GetString("p_inventory"));
         PlayerPrefsManager.RemoveAllOfObjectTypeFromInventory("troycoin");

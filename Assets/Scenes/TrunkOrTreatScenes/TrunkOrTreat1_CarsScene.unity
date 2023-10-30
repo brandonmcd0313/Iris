@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 741243493}
   m_Layer: 0
   m_Name: Cars (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,9 +517,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 78901881}
-  - {fileID: 1820187763}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966611687
 GameObject:
@@ -535,7 +534,7 @@ GameObject:
   - component: {fileID: 966611691}
   m_Layer: 0
   m_Name: Candy (2)
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +604,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &966611690
 MonoBehaviour:
@@ -731,7 +730,7 @@ GameObject:
   - component: {fileID: 1067595970}
   m_Layer: 0
   m_Name: Background people-devil_0
-  m_TagString: Untagged
+  m_TagString: Crowd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +821,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550117600
 GameObject:
@@ -834,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550117603}
   - component: {fileID: 1550117602}
-  - component: {fileID: 1550117601}
+  - component: {fileID: 1550117604}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -842,18 +841,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1550117601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550117600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c3366e519ac7243b6ed2b45e2a83c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1550117602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,8 +868,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550117604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550117600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a87144a95fae841a85426006bfbab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carLeavingSound: {fileID: 0}
 --- !u!1 &1592746033
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 1592746037}
   m_Layer: 0
   m_Name: Candy
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,7 +967,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1592746036
 MonoBehaviour:
@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 1820187765}
   m_Layer: 0
   m_Name: Candy (1)
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,12 +1159,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820187761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.64376086, y: -0.1347405, z: 0}
-  m_LocalScale: {x: 2.6423235, y: 2.6423235, z: 2.6423235}
+  m_LocalPosition: {x: 7.11843, y: -2.93409, z: 0}
+  m_LocalScale: {x: 4.590609, y: 4.590609, z: 4.590609}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 741243494}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1820187764
 MonoBehaviour:
@@ -1291,7 +1291,7 @@ GameObject:
   - component: {fileID: 1882941110}
   m_Layer: 0
   m_Name: Candy (1)_0
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1361,7 +1361,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1882941109
 MonoBehaviour:
@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 2054492226}
   m_Layer: 0
   m_Name: Background people-vampire_0
-  m_TagString: Untagged
+  m_TagString: Crowd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1815,7 +1815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4491946389605702523
 PrefabInstance:
@@ -1883,6 +1883,10 @@ PrefabInstance:
     - target: {fileID: 4491946389970222526, guid: 1ef0d1b2c7456fd48a16e3eed81ce4b5, type: 3}
       propertyPath: m_Name
       value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491946389970222526, guid: 1ef0d1b2c7456fd48a16e3eed81ce4b5, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef0d1b2c7456fd48a16e3eed81ce4b5, type: 3}
@@ -1952,6 +1956,10 @@ PrefabInstance:
     - target: {fileID: 6657639368679229012, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
       propertyPath: m_Name
       value: Cars
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657639368679229012, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}

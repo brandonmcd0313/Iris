@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Missing Poster
       objectReference: {fileID: 0}
+    - target: {fileID: 2823542371032131365, guid: 96ef0c734ffc4f347932b4dbbd5131e6, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 2823542371032131367, guid: 96ef0c734ffc4f347932b4dbbd5131e6, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -333,6 +337,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &813460800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813460802}
+  - component: {fileID: 813460801}
+  m_Layer: 0
+  m_Name: Trunk OR Treat LEaving
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &813460801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813460800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e4af48f39e5734d9b76b364424bd04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &813460802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813460800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0315337, y: 2.283123, z: -0.11362998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1742665783
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +391,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1742665787}
   - component: {fileID: 1742665786}
-  - component: {fileID: 1742665785}
   - component: {fileID: 1742665784}
+  - component: {fileID: 1742665788}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -365,19 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLocked: 1
-  IsLockedToTheRight: 0
---- !u!114 &1742665785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742665783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c3366e519ac7243b6ed2b45e2a83c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  IsLockedToTheRight: 1
 --- !u!114 &1742665786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +443,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1742665788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742665783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a87144a95fae841a85426006bfbab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carLeavingSound: {fileID: 0}
 --- !u!1 &1820187761
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1019,10 @@ PrefabInstance:
     - target: {fileID: 6657639368679229012, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657639368679229012, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}

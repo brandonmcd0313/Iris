@@ -223,11 +223,11 @@ MonoBehaviour:
   _targetObject: {fileID: 977653805}
   _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: 
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &245328457
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245328460}
   - component: {fileID: 245328459}
-  - component: {fileID: 245328458}
+  - component: {fileID: 245328461}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -246,18 +246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &245328458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245328457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c3366e519ac7243b6ed2b45e2a83c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &245328459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +275,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245328461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245328457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a87144a95fae841a85426006bfbab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carLeavingSound: {fileID: 0}
 --- !u!1 &269179425
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,11 +431,11 @@ MonoBehaviour:
   _targetObject: {fileID: 977653805}
   _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: Scared
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &663586536
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,11 +715,11 @@ MonoBehaviour:
   _targetObject: {fileID: 977653805}
   _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: Scared
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &977653805
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,11 +851,11 @@ MonoBehaviour:
   _targetObject: {fileID: 977653805}
   _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: 
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &1315190406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cars
       objectReference: {fileID: 0}
+    - target: {fileID: 6657639368679229012, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 6657639368692853562, guid: 3e883872fb307ed4ba3593a7fe5aef0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.25
@@ -1242,11 +1247,11 @@ MonoBehaviour:
   _targetObject: {fileID: 977653805}
   _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: 
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &1648283001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,14 +1455,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685238db922b6374a97dc79402ced239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetObject: {fileID: 0}
-  _targetObjectTwo: {fileID: 0}
+  _targetObject: {fileID: 977653805}
+  _targetObjectTwo: {fileID: 1729900544}
   _targetObjectName: 
-  _speed: 3
+  _speed: 5
   _moveOnYAxis: 0
   _animationName: Scared
-  _randomXRange: {x: 2, y: 8}
-  _randomYRange: {x: 2, y: 8}
+  _randomXRange: {x: -2, y: 2}
+  _randomYRange: {x: -2, y: 2}
 --- !u!1 &1729900544
 GameObject:
   m_ObjectHideFlags: 0

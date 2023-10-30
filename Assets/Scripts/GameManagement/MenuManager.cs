@@ -41,14 +41,12 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadFirstScene()
     {
-        for (int i = 0; i <= 255; i += 5)
-        {
-            //fade the overlay out
-            _loadingScreen.GetComponent<Image>().color =
-                new Color(0, 0, 0, i / 255.0f);
-            yield return new WaitForSeconds(0.02f);
-        }
-
+        //spawn full black screen for half second
+      
+        _loadingScreen.GetComponent<Image>().color =
+                new Color(0, 0, 0, 1);
+            yield return new WaitForSeconds(0.5f);
+        
         UnityEngine.SceneManagement.SceneManager.LoadScene("Park1_StartingScene");
         //SceneManager.LoadScene("Park 1_Starting Scene");
     }

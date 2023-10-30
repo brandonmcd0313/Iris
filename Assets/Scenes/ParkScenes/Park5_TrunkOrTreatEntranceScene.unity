@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _highlightedTable: {fileID: 21300000, guid: d18b10e60e449d049b18ecff423ec604, type: 3}
   _unhighlightedTable: {fileID: 21300000, guid: 0dcd2ddef557c2149855cd02fcec4650, type: 3}
+  _tableTroyCoin: {fileID: 856683611613443145, guid: 1ea0afe1488fe0b429cea237cadcb037, type: 3}
 --- !u!4 &425803888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3068612320543212968, guid: e3244e0c984bef24183238be2c2c40b8, type: 3}

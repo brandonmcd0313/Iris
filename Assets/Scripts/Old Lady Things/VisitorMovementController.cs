@@ -15,7 +15,7 @@ public class VisitorMovementController : MonoBehaviour
 
     GameObject _activeBubble;
     List<GameObject> _activeVisitors = new List<GameObject>();
-    private string _sceneLoadEvent = "p_hasLoadedTrunkOrTreatEntrance";
+    string _hasPayedTroyCoinEvent = "p_hasPayedTroyCoin";
     // Start is called before the first frame update
     //must be awake to happen before the scene manager is created
     void Awake()
@@ -25,6 +25,16 @@ public class VisitorMovementController : MonoBehaviour
     }
     private void Start()
     {
+        if (PlayerPrefsManager.HasPlayerPrefBeenActivated(_hasPayedTroyCoinEvent))
+        {
+            StopAllCoroutines();
+            Destroy(_activeBubble);
+            Destroy(_oldLady);
+            foreach (GameObject visitor in _activeVisitors)
+            {
+                Destroy(visitor);
+            }
+        }
         GameObject.Find("Table").GetComponent<Table>().OnPlayerPaysTroyCoin += StopAllVisitors;
     }
 

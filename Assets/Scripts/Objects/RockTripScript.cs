@@ -5,8 +5,8 @@ using UnityEngine;
 public class RockTripScript : MonoBehaviour
 {
     public bool _playerCanTrip;
-   
-    
+    string _playerTrippedEventName = "p_playerHasTripped";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class RockTripScript : MonoBehaviour
 
         if (_otherObject.tag == "Player" && _playerCanTrip == true)
         {
+            PlayerPrefsManager.ActivatePlayerPref(_playerTrippedEventName);
             //remove the candy from inventory
             print("inventory before removing candy from bag: " + PlayerPrefs.GetString("p_inventory"));
             PlayerPrefsManager.RemoveAllOfObjectTypeFromInventory("candy");

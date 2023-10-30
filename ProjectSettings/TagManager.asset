@@ -9,6 +9,7 @@ TagManager:
   - TroyCoin
   - Candy
   - Crowd
+  - Car
   layers:
   - Default
   - TransparentFX
