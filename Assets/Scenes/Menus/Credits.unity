@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 385151297188651659, guid: 8a137ca0e95fbef46b7b5370c2d3a167, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -413
+      value: -449.96
       objectReference: {fileID: 0}
     - target: {fileID: 385151297188651659, guid: 8a137ca0e95fbef46b7b5370c2d3a167, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9165c347db7b945ac3e414d21a4e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _revealPoint: {fileID: 716091216}
-  _revealSpeed: 55
+  ScreenHeightPositionInPercent: 90
+  _revealSpeed: 50
 --- !u!1 &1124824868
 GameObject:
   m_ObjectHideFlags: 0
